@@ -17,13 +17,14 @@ def monte_carlo(n):
         return pi
     
 def wallis(n):
-        pi = 0.0
-        for i in range(n):
-            left = (2 * i)/(2 * i - 1)
-            right = (2 * i)/(2 * i + 1)
-            total = left * right
-            pi = pi + total
-        return pi
+        pi = 1.0
+        for i in range(1,n):
+            x=4.0*(i**2)
+            y=x-1
+            total = x/y
+            pi*=total
+            
+        return pi*2
     
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
