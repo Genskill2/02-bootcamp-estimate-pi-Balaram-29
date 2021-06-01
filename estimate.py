@@ -16,7 +16,7 @@ def monte_carlo(n):
         pi = 4* circle_points/ square_points    
         return pi
     
-def wallis(self,n):
+def wallis(n):
         pi = 0.0
         for i in range(n):
             left = (2 * i)/(2 * i - 1)
